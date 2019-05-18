@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script type="text/javascript" src="lms.js"></script>
+        <title>
+            LMS
+        </title>
+    </head>
+    <body>
+        <div>
+            <h1>Add a Book</h1>
+            <form id="book_form" action="" >
+                Author:<br>
+                <input type="text" id="author" name="author" placeholder="Type an author.." required>
+                <br><br>
+                Title:<br>
+                <input type="text" name="title" placeholder="Type a title.." required>
+                <br><br>
+                ReadingStatus:<br>
+                <input type="radio" id="reading_status" name="reading_status" value="True" required>True<br>
+                <input type="radio" id="reading_status" name="reading_status" value="False">False<br>
+                <br><br>
+                Rating:<br>
+                <input type="text" name="rating" placeholder="Give a rating..">
+                <br><br>
+                Note:<br>
+                <input type="text" name="note" placeholder="Add notes..">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+            <div id="success_msg"></div>
+
+            <h1>Book Status</h1>
+            Click the button to see the number of books currently being read
+            <input type="submit" value="Click" onclick="getCurrentlyReadingBooks()">
+            <div><h3 id="books_count"></h3></div>
+            
+            <h1>Search book</h1>
+            <form action="" id="search_form">
+                Book Title:<br>
+                <input type="search" id="search" placeholder="Search a book.." required>
+                <br><br>
+                <input type="submit" value="Search">
+            </form>
+            <div id=searched_book></div>
+
+            <h1>Add Note</h1>
+            <form action="" id="note_form">
+                Book Title:<br>
+                <input type="text" name="book_title" required>
+                <br><br>
+                Note:<br>
+                <input type="text" name="book_note" required>
+                <br><br>
+                <input type="submit" value="Add Note">
+            </form>
+            <div id=note_success></div>
+
+            <h1>All Notes</h1>
+            Click the button to see all notes
+            <input type="submit" value="Click" onclick="showAllNotes()">
+            <div id="all_notes"></div>
+        </div>
+    </body>
+</html>
