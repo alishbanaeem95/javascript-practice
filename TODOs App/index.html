@@ -1,0 +1,82 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="styles.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+            <script src='index.js'></script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                <a class="navbar-brand" href="#">TODO App</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><button id="Login" class="btn-primary" onclick="loginClick()">Login</button></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-wrap="true" data-pause="false">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="https://picsum.photos/id/1006/3000/2000">
+            <div class="container">
+              <div class="carousel-caption">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="https://picsum.photos/id/1006/3000/2000">
+            <div class="container">
+              <div class="carousel-caption">
+                
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="https://picsum.photos/id/1006/3000/2000">
+            <div class="container">
+              <div class="carousel-caption">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="https://picsum.photos/id/1006/3000/2000">
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <form class="col-sm-12" id="searchForm" onsubmit="return ValidateLogin()" action="todos.html" method="POST">
+            <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+            </div>
+            <input type="submit" class="btn btn-default"/>
+            <div id="errorMsg"></div>
+        </form>
+        
+    </body>
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" style="background-color: black">
+            
+    </nav>
+
+</html>
