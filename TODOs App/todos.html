@@ -4,38 +4,26 @@
         <link rel="stylesheet" href="styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src='todosLIb.js'></script>
     </head>
     <body>
-        <table id="todos" class="table">
+        <button class="btn-primary" id="Logout">Logout</button>
+        <table id="todos" class="table table-hover">
             <thead>
                 <tr>
                 <th>UserID</th>
                 <th>ID</th>
                 <th>Title</th>
                 <th>Completed</th>
+                <th>Action</th>
                 </tr>
             </thead>
             <tbody id="todosBody">
-                
             </tbody>
         </table>
-
-        <script>
-            
-
-            var tableBody = document.getElementById("todosBody");
-            for (i = 0; i < arr.length; i++) {
-                var tr = document.createElement('tr');
-                for (var key in arr[i]) {
-                    var td = document.createElement('td')
-                    td.appendChild(document.createTextNode(arr[i][key]));
-                    tr.appendChild(td)
-                }
-                tableBody.appendChild(tr);
-            }
-
-
-            
-        </script>
+        <button class="btn-primary" id="first">first</button>
+        <button class="btn-primary" id="next" >next</button>
+        <button class="btn-primary" id="previous">previous</button>
+        <button class="btn-primary" id="last">last</button>
     </body>
 </html>
